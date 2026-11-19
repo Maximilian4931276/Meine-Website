@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Kleingewerbe – Handgemachtes & Regionales</title>
+    <style>
+        /* Grundlegende Einstellungen */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Kopfbereich (Hero-Section) */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            color: #ecf0f1;
+        }
+
+        /* Hauptbereich */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        /* Produkt-Raster (Galerie) */
+        .produkt-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .produkt-karte {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        .produkt-karte img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        .produkt-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .produkt-info h3 {
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        .preis {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        .produkt-info p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-mail {
+            background-color: #27ae60;
+            color: white;
+        }
+        .btn-mail:hover {
+            background-color: #219150;
+        }
+        .btn-tel {
+            background-color: #2980b9;
+            color: white;
+            margin-top: 10px;
+        }
+        .btn-tel:hover {
+            background-color: #21618c;
+        }
+
+        /* Bestell- & Kontaktbereich */
+        .kontakt-box {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .kontakt-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Fußzeile (Rechtliches) */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kopfbereich -->
+    <header>
+        <h1>Dein Firmenname</h1>
+        <p>Handgefertigte Unikate direkt aus der Region. Schau dich um und bestelle ganz unkompliziert per Telefon oder E-Mail.</p>
+        <a href="#kontakt" class="btn btn-mail">Direkt bestellen / Kontakt</a>
+    </header>
+
+    <!-- Produktgalerie -->
+    <div class="container">
+        <h2>Unsere aktuellen Produkte</h2>
+
+        <div class="produkt-grid">
+
+            <!-- Produkt 1 -->
+            <div class="produkt-karte">
+                <!-- Ersetze 'produkt1.jpg' mit dem Dateinamen deines Fotos -->
+                <img src="https://placeholder.com" alt="Produkt 1">
+                <div class="produkt-info">
+                    <h3>Produktname 1</h3>
+                    <div class="preis">19,90 €</div>
+                    <p>Kurze Beschreibung des Produkts: Maße, Material oder besondere Eigenschaften.</p>
+                    <!-- Der Betreff der E-Mail wird automatisch ausgefüllt! -->
+                    <a href="mailto:deine-mail@beispiel.de?subject=Bestellung:%20Produktname%201" class="btn btn-mail">Per E-Mail anfragen</a>
+                </div>
+            </div>
+
+            <!-- Produkt 2 -->
+            <div class="produkt-karte">
+                <img src="https://placeholder.com" alt="Produkt 2">
+                <div class="produkt-info">
+                    <h3>Produktname 2</h3>
+                    <div class="preis">24 €</div>
+                    <p>Kurze Beschreibung des Produkts: Ideal als Geschenk oder für den eigenen Bedarf.</p>
+                    <a href="mailto:deine-mail@beispiel.de?subject=Bestellung:%20Produktname%202" class="btn btn-mail">Per E-Mail anfragen</a>
+                </div>
+            </div>
+
+            <!-- Produkt 3 -->
+            <div class="produkt-karte">
+                <img src="https://placeholder.com" alt="Produkt 3">
+                <div class="produkt-info">
+                    <h3>Produktname 3</h3>
+                    <div class="preis">12,00 €</div>
+                    <p>Kurze Beschreibung des Produkts: Solange der Vorrat reicht.</p>
+                    <a href="mailto:deine-mail@beispiel.de?subject=Bestellung:%20Produktname%203" class="btn btn-mail">Per E-Mail anfragen</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Kontakt & Bestellinfos -->
+        <div id="kontakt" class="kontakt-box">
+            <h2>So kannst du bestellen</h2>
+            <p>Du hast etwas Schönes entdeckt? Melde dich einfach telefonisch oder per E-Mail mit dem gewünschten Produktnamen. Abholung vor Ort oder Versand nach Absprache möglich.</p>
+
+            <div class="kontakt-buttons">
+                <a href="tel:+49123456789" class="btn btn-tel">📞 Anrufen: 0123 / 456 789</a>
+                <a href="mailto:deine-mail@beispiel.de?subject=Allgemeine%20Anfrage" class="btn btn-mail">✉️ E-Mail schreiben</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fußzeile -->
+    <footer>
+        <p>&copy; 2026 Dein Firmenname</p>
+        <p style="margin-top: 10px;">
+            <!-- Wichtig für gewerbliche Seiten in Deutschland! -->
+            <strong>Impressum:</strong> Max Mustermann | Musterstraße 1, 12345 Musterstadt | E-Mail: deine-mail@beispiel.de | Tel: 0123/456789
+        </p>
+    </footer>
+
+</body>
+</html>
+
